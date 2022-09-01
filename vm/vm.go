@@ -6,7 +6,6 @@ import (
 	"github.com/ava-labs/avalanchego/database/versiondb"
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/snow"
-	"github.com/ava-labs/avalanchego/snow/choices"
 	"github.com/ava-labs/avalanchego/snow/consensus/snowstorm"
 	"github.com/ava-labs/avalanchego/snow/engine/common"
 	"github.com/ava-labs/avalanchego/utils/json"
@@ -104,7 +103,7 @@ func (vm *VM) PendingTxs() []snowstorm.Tx {
 	return txs
 }
 
-func (vm *VM) ParseTx(b []byte) (snowstorm.Tx, error) {
+/* func (vm *VM) ParseTx(b []byte) (snowstorm.Tx, error) {
 	return vm.parseTx(b)
 }
 
@@ -146,4 +145,4 @@ func (vm *VM) parseTx(bytes []byte) (*UniqueTx, error) {
 	}
 
 	return tx, nil
-}
+} */

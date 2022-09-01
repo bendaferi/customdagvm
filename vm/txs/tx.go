@@ -14,7 +14,7 @@ import (
 	"github.com/ava-labs/avalanchego/utils/hashing"
 	"github.com/ava-labs/avalanchego/vms/components/avax"
 	"github.com/ava-labs/avalanchego/vms/secp256k1fx"
-	"github.com/ava-labs/bendaferi/customdagvm/vm/fxs"
+	"github.com/bendaferi/customdagvm/vm/fxs"
 )
 
 var errNilTx = errors.New("nil tx is not valid")
