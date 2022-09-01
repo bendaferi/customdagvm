@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/ava-labs/avalanchego/vms/rpcdagvm"
 	log "github.com/inconshreveable/log15"
-	// "github.com/bendaferi/customdagvm"
 )
 
 func main() {
@@ -19,11 +19,11 @@ func main() {
 	}
 	// Print VM ID and exit
 	if version {
-		// fmt.Printf("%s@%s\n", customdagvm.Name, customdagvm.Version)
+		fmt.Printf("%s@%s\n", customdagvm.Name, customdagvm.Version)
 		os.Exit(0)
 	}
 
 	log.Root().SetHandler(log.LvlFilterHandler(log.LvlDebug, log.StreamHandler(os.Stderr, log.TerminalFormat())))
 
-	// rpcdagvm.Serve(&customdagvm.VM{})
+	rpcdagvm.Serve(&customdagvm.VM{})
 }
